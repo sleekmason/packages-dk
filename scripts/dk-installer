@@ -24,14 +24,14 @@ read -p "   [0;32mDk Window Manager Installer[0m
 echo ""
 sudo apt update
 cd /tmp || exit &&
-rm -f /tmp/dk_2.0-1_amd64.deb
+rm -f /tmp/dk_2.0-1~lilidog+1_amd64.deb
 rm -f /tmp/dk-conf-files.zip
 rm -f -r /tmp/dk-conf-files
-wget https://raw.githubusercontent.com/sleekmason/packages/master/dk_2.0-1_amd64.deb --show-progress -q &&
+wget https://raw.githubusercontent.com/sleekmason/packages/master/dk_2.0-1~lilidog+1_amd64.deb --show-progress -q &&
 wget https://raw.githubusercontent.com/sleekmason/packages/master/dk-conf-files2.zip --show-progress -q &&
 unzip -q dk-conf-files2.zip &&
 echo ""
-sudo apt install -y /tmp/./dk_2.0-1_amd64.deb polybar sxhkd &&
+sudo apt install -y /tmp/./dk_2.0-1~lilidog+1_amd64.deb polybar sxhkd &&
 if [ -e "$HOME/.config/dk" ]; then
    if [ ! -e "$HOME/.config/dk.bak" ]; then
      cp -r "$HOME/.config/dk" "$HOME/.config/dk.bak"
