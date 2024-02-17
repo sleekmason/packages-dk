@@ -23,14 +23,14 @@ read -p "   [0;32mDk Window Manager Installer[0m
    if : >/dev/tcp/8.8.8.8/53; then
 echo ""
 cd /tmp || exit &&
-rm -f /tmp/dk_1.9-1_amd64.deb
-rm -f /tmp/dk-conf-files.zip
+rm -f /tmp/dk_1.9-1~lilidog_amd64.deb
+rm -f /tmp/dk-conf-files1.zip
 rm -f -r /tmp/dk-conf-files
-wget https://raw.githubusercontent.com/sleekmason/packages/master/dk_1.9-1_amd64.deb --show-progress -q &&
-wget https://raw.githubusercontent.com/sleekmason/packages/master/dk-conf-files.zip --show-progress -q &&
-unzip -q dk-conf-files.zip &&
+wget https://raw.githubusercontent.com/sleekmason/packages/master/dk_1.9-1~lilidog_amd64.deb --show-progress -q &&
+wget https://raw.githubusercontent.com/sleekmason/packages/master/dk-conf-files1.zip --show-progress -q &&
+unzip -q dk-conf-files1.zip &&
 echo ""
-sudo apt update && sudo apt install -y /tmp/./dk_1.9-1_amd64.deb polybar sxhkd &&
+sudo apt update && sudo apt install -y /tmp/./dk_1.9-1~lilidog_amd64.deb polybar sxhkd &&
 if [ -e "$HOME/.config/dk" ]; then
    if [ ! -e "$HOME/.config/dk.bak" ]; then
      cp -r "$HOME/.config/dk" "$HOME/.config/dk.bak"
